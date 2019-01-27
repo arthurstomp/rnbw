@@ -2,7 +2,16 @@
 # and its dependencies with the aid of the Mix.Config module.
 use Mix.Config
 
-config :joken, default_signer: "SECRET"
+config :heimdall, default_signer: "SECRET"
+
+config :rnbw, ecto_repos: [Rnbw.Repo]
+
+config :rnbw, Rnbw.Repo,
+  database: "rnbw_dev",
+  username: "postgres",
+  password: "postgres",
+  hostname: "localhost",
+  port: 5432
 
 # This configuration is loaded before any dependency and is restricted
 # to this project. If another project depends on this project, this

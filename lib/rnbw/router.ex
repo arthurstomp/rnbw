@@ -16,7 +16,7 @@ defmodule Rnbw.Router do
   post "/" do
   end
 
-  puts "/:id" do
+  put "/:id" do
   end
 
   delete "/:id" do
