@@ -8,6 +8,7 @@ defmodule Rnbw.Application do
   def start(_type, _args) do
     # List all child processes to be supervised
     children = [
+      Plug.Cowboy.child_spec(scheme: :http, plug: Rnbw.Router)
       # Starts a worker by calling: Rnbw.Worker.start_link(arg)
       # {Rnbw.Worker, arg}
     ]
